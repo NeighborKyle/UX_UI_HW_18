@@ -3,7 +3,7 @@ body{
     ;
 }
 .logoImage{
-   width: 23%;
+   width: 150px;
    padding: 1%;
 }
 .inline-block{
@@ -11,35 +11,154 @@ display: inline-block;
 vertical-align: top;
 }
 
-nav{
-    width: 72%;
-    padding: 1%;
-}
+
 
 ul{
-    width: 50%;
-    margin-left: auto;
+    text-align: right;
+    display: inline-block;
+    list-style-type: none;
+   
 }
 
+ul li{
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
 .heroImg{
-    height: 600px;
-    padding: 25px;
+padding-top: 20px;
+    display: grid;
+    grid-template-columns: auto 600px auto;
+    
+    grid-template-areas: ". picture ."
+                         "desc desc desc"
+                         ". download ."; 
+                          
+    
 }
 
-.content{
-    width: 500px;
-    margin: 0 auto;
-}
 .headshot{
-    width: 75%;
+    width: 100%;
+    grid-area: picture;
+   
+   
+}
+.desc{
+    grid-area: desc;
+}
+.heroButton{
+    grid-area: download;
+    width: 170px;
+    height: 35px;
+    place-self: center;
 }
 footer{
     background-color: #373738;
+    text-align: center;
 
 }
 
 footer ul li{
-    padding-left: 50%;
-    padding-right: 50%;
+    color: white;
+    text-align: center;
 }
 
+.flexContainer{
+    display: flex;
+    align-self: center;
+}
+.flexContainer div{
+    width: 33%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.Icon{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.workGrid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto; 
+    row-gap: 10px;
+    column-gap: 10px;
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, .2) ;
+    border: solid 1px lightgray;
+    border-radius: 15px;
+}
+.myWorkContainer{
+    display: grid;
+    grid-template-rows: auto; 
+    grid-template-columns: auto;
+    row-gap: 10px;
+    column-gap: 10px;
+
+}
+
+ h4{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 24px
+ }  
+
+ p{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     text-align: center;
+ }
+.container{
+    box-align: center;
+}
+.workpicture{
+    width: 100%;
+}
+
+button{
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: #30BE96;
+}
+button:hover{
+    background-color: #dadada;
+    color: #30BE96
+
+}
+
+h1{
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 36px;
+}
+
+h3{
+    text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+
+}
+.Navbar{
+    display: grid;
+    grid-template-columns: 175px auto;
+}
+.workGrid p{
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+   .flexContainer{
+       flex-direction: column;
+       align-self: center;
+   }
+   .container{
+       align-self: center;}
+   }
